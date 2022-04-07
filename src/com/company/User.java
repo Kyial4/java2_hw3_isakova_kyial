@@ -8,9 +8,9 @@ public class User {
         return name;
     }
 
-    public void setName(String name) throws IllegalNameLengthException {
+    public void setName(String name) throws IllegalNameLengthException  {
         if (name.length() > 20) {
-            throw new IllegalNameLengthException();
+            throw new IllegalNameLengthException ("Имя введено неверно");
         } else {
             this.name = name;
         }
@@ -22,7 +22,7 @@ public class User {
 
     public void setAge(int age) throws IllegalAgeException {
         if (age > 100) {
-            throw new IllegalAgeException();
+            throw new IllegalAgeException("Введите верный возраст");
         } else {
             this.age = age;
         }
